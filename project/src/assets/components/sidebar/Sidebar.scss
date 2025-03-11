@@ -1,0 +1,22 @@
+.sidebar {
+    padding: 0 3rem;
+    position: fixed;
+    left: .8rem;
+    width: 12%;
+    overflow: auto;
+    background-color: #18181d;
+    height: 97vh;
+    border-radius: 1rem;
+
+    &__logo {
+        margin: 3rem 0px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .active {
+        color: #4559c3;
+    }
+}

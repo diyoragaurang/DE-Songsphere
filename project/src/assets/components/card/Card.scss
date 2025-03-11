@@ -1,0 +1,26 @@
+.card {
+    padding: 1.6rem;
+    width: 15%;
+    background-color: #131313;
+    border-radius: .8rem;
+    transition: all .3s;
+    cursor: pointer;
+
+    &:hover {
+        // background: -webkit-linear-gradient(360deg, #1C1C1C 10%, #494949 360%);
+        // background: -moz-linear-gradient(360deg, #1C1C1C 10%, #494949 360%);
+        // background: linear-gradient(360deg, #1C1C1C 10%, #494949 360%);
+        background-color: #282828;
+    }
+
+    &__image {
+        img {
+            width: 100%;
+            border-radius: .8rem;
+        }
+    }
+
+    &__content {
+        margin: 1.5rem 0;
+    }
+}
