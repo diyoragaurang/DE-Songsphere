@@ -1,0 +1,294 @@
+// Radio.scss
+
+.page-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: white;
+  }
+}
+
+.content-section {
+  margin-bottom: 3rem;
+}
+
+// Currently playing section
+.now-playing {
+  background-color: rgba(20, 20, 20, 0.6);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  
+  h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+  }
+}
+
+.player-card {
+  display: flex;
+  align-items: center;
+  
+  .station-logo {
+    width: 180px;
+    height: 180px;
+    border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  .station-info {
+    margin-left: 2rem;
+    flex: 1;
+    
+    h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: white;
+    }
+    
+    .playing-now {
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+.player-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  
+  .control-button {
+    background-color: rgba(30, 30, 30, 0.7);
+    color: white;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    
+    &:hover {
+      background-color: rgba(40, 40, 40, 0.9);
+    }
+  }
+  
+  .play-pause-button {
+    background-color: #1db954;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    
+    &:hover {
+      background-color: #1ed760;
+      transform: scale(1.05);
+    }
+  }
+}
+
+// Stations grid
+h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 2rem 0 1.5rem;
+  color: white;
+}
+
+.stations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.station-card {
+  background-color: rgba(30, 30, 30, 0.7);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    background-color: rgba(40, 40, 40, 0.9);
+  }
+  
+  .station-icon {
+    width: 100%;
+    height: 180px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+      
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+  
+  .station-details {
+    padding: 0.5rem 0;
+    
+    h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: white;
+    }
+    
+    p {
+      margin: 0.3rem 0;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.7);
+      
+      &:last-child {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 0.85rem;
+      }
+    }
+  }
+  
+  .tune-in-button {
+    background-color: transparent;
+    color: #1db954;
+    border: 2px solid #1db954;
+    padding: 0.7rem 0;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: auto;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    
+    &:hover {
+      background-color: #1db954;
+      color: white;
+    }
+  }
+}
+
+// Create your own station section
+.create-station {
+  background-color: rgba(20, 20, 20, 0.6);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  
+  h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .create-button {
+    background-color: #1db954;
+    color: white;
+    border: none;
+    padding: 0.8rem 2.5rem;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    
+    &:hover {
+      background-color: #1ed760;
+      transform: scale(1.05);
+    }
+  }
+}
+
+// Media queries for responsive design
+@media (max-width: 768px) {
+  .player-card {
+    flex-direction: column;
+    
+    .station-logo {
+      margin-bottom: 1.5rem;
+    }
+    
+    .station-info {
+      margin-left: 0;
+      text-align: center;
+    }
+  }
+  
+  .player-controls {
+    justify-content: center;
+  }
+  
+  .stations-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+  
+  .station-card {
+    .station-icon {
+      height: 150px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .page-container {
+    padding: 1rem;
+  }
+  
+  .now-playing, .create-station {
+    padding: 1.5rem;
+  }
+  
+  .stations-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .player-controls {
+    flex-direction: column;
+    gap: 0.8rem;
+    
+    button {
+      width: 100%;
+    }
+  }
+}
